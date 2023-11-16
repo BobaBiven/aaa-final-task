@@ -4,6 +4,15 @@ import time
 
 
 def log(template):
+    """
+    A decorator that logs the time it takes for a function to execute.
+
+    Args:
+    - template (str): The template string used to format the log message.
+
+    Returns:
+    - decorator: The decorator function.
+    """
     def decorator(func):
         @functools.wraps(func)
         def wrapper(*args, **kwargs):
